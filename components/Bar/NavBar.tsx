@@ -58,7 +58,7 @@ export default function NavBar() {
               <span className="relative capitalize font-semibold text-lg ">
                 {name}
                 {currentHash == hash && (
-                  <span className="absolute  w-full h-0.5  bg-primary left-0 bottom-0 -z-1 " />
+                  <span className="absolute w-full h-0.5  bg-primary left-0 -bottom-1 -z-1 " />
                 )}
               </span>
             </a>
