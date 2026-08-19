@@ -34,4 +34,21 @@ body {
 * {
   -ms-overflow-style: none; /* Edge and IE */
   scrollbar-width: none; /* Firefox */
+  user-select: none;
+}
+@layer components {
+  .linear-gradient {
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0),
+      var(--background) 90%
+    );
+    @apply absolute inset-0;
+  }
+  .icon {
+    @apply size-8 stroke-primary md:size-16;
+  }
+  .icon-sm {
+    @apply size-6 stroke-primary md:size-8;
+  }
 }

@@ -25,7 +25,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center bg-white/10 backdrop-blur-2xl md:px-12 md:py-6 px-4 py-6 justify-between z-100">
+    <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center bg-white/1 backdrop-blur-md md:px-12 md:py-6 px-4 py-6 justify-between z-100">
       <Link href={""}>
         <Image
           width={1280}
@@ -38,11 +38,11 @@ export default function NavBar() {
       <section>
         {showTabs ? (
           <span onClick={() => setShowTabs(false)}>
-            <XMark className="md:hidden size-10 stroke-primary" />
+            <XMark className="md:hidden icon" />
           </span>
         ) : (
           <span onClick={() => setShowTabs(true)}>
-            <Bars className="md:hidden size-10 stroke-primary" />
+            <Bars className="md:hidden icon" />
           </span>
         )}
       </section>
