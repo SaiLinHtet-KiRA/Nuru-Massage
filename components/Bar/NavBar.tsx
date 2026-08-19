@@ -1,15 +1,28 @@
 "use client";
 import { Tabs } from "@/constant/data";
+import { useHash } from "@/hook/useHash";
 import { Bars, XMark } from "@/svg";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
-  const [showTabs, setShowTabs] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth >= 640;
-  });
+  const [showTabs, setShowTabs] = useState(false);
+  const currentHash = useHash();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowTabs(window.innerWidth >= 640);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center bg-white/10 backdrop-blur-2xl md:px-12 md:py-6 px-4 py-6 justify-between">
@@ -22,29 +35,36 @@ export default function NavBar() {
           className="md:w-26 w-22 "
         />
       </Link>
-      {showTabs ? (
-        <span onClick={() => setShowTabs(false)}>
-          <XMark className="md:hidden size-10 stroke-primary" />
-        </span>
-      ) : (
-        <span onClick={() => setShowTabs(true)}>
-          <Bars className="md:hidden size-10 stroke-primary" />
-        </span>
-      )}
+      <section>
+        {showTabs ? (
+          <span onClick={() => setShowTabs(false)}>
+            <XMark className="md:hidden size-10 stroke-primary" />
+          </span>
+        ) : (
+          <span onClick={() => setShowTabs(true)}>
+            <Bars className="md:hidden size-10 stroke-primary" />
+          </span>
+        )}
+      </section>
 
-      {showTabs && (
+      {showTabs ? (
         <section className=" items-center gap-6 flex flex-wrap ">
           {Tabs.map(({ name, hash }) => (
-            <Link
-              href={{ hash }}
+            <a
+              href={`#${hash}`}
               key={name}
-              className="capitalize font-semibold text-lg w-screen md:w-fit text-center"
+              className="w-screen md:w-fit text-center relative z-1"
             >
-              {name}
-            </Link>
+              <span className="relative capitalize font-semibold text-lg ">
+                {name}
+                {currentHash == hash && (
+                  <span className="absolute  w-full h-0.5  bg-primary left-0 bottom-0 -z-1 " />
+                )}
+              </span>
+            </a>
           ))}
         </section>
-      )}
+      ) : null}
     </nav>
   );
 }
