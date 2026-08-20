@@ -24,9 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   display: none;
-}
+} */
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
@@ -36,6 +36,11 @@ body {
   scroll-behavior: smooth;
   @apply transition-all duration-200 ease-in-out;
 }
+
+section {
+  @apply snap-start;
+}
+
 @layer components {
   .linear-gradient {
     background: radial-gradient(

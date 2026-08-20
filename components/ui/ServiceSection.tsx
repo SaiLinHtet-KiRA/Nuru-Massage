@@ -25,7 +25,7 @@ export default function ServiceSection() {
         className="grid md:grid-cols-[50%_60%] md:grid-rows-1 grid-cols-1 grid-rows-[40%_60%] h-screen w-screen items-center gap-0  z-10 relative "
         id="service"
       >
-        <section className="flex flex-col font-bold z-10 md:m-0 mb-[2%] self-end md:self-auto justify-self-center md:items-start items-center ">
+        <header className="flex flex-col font-bold z-10 md:m-0 mb-[2%] self-end md:self-auto justify-self-center md:items-start items-center ">
           <h1 className="title">Our Service</h1>
           <span className="md:text-xl text-md">
             Choose Your Dream Room And Your Dream Girls
@@ -38,12 +38,12 @@ export default function ServiceSection() {
             See Menu
           </h1>
 
-          <section className="flex flex-col md:gap-2 gap-3 md:mt-3 mt-6">
+          <div className="flex flex-col md:gap-2 gap-3 md:mt-3 mt-6">
             {Rooms.map((room, i) => (
               <CardContainer {...room} key={i} />
             ))}
-          </section>
-        </section>
+          </div>
+        </header>
         <span className="md:relative absolute md:h-full md:-left-[25%] left-0 md:w-full md:bottom-0 bottom-20  justify-self-center -z-1">
           <Image
             width={760}

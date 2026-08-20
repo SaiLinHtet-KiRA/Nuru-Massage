@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 
 export function useHash() {
@@ -7,7 +5,7 @@ export function useHash() {
 
   useEffect(() => {
     const updateHash = () => {
-      setHash(window.location.hash);
+      setHash(window.location.hash.slice(1));
     };
 
     updateHash();
@@ -19,5 +17,13 @@ export function useHash() {
     };
   }, []);
 
-  return hash.slice(1);
+  const update = (value: string) => {
+    history.pushState(null, "", `#${value}`);
+    setHash(value);
+  };
+
+  return {
+    hash,
+    setHash: update,
+  };
 }

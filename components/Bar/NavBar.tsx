@@ -8,7 +8,30 @@ import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const [showTabs, setShowTabs] = useState(false);
-  const currentHash = useHash();
+  const { hash: currentHash, setHash } = useHash();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible) {
+          setHash(visible.target.id);
+        }
+      },
+      {
+        threshold: 0.5,
+      },
+    );
+
+    document
+      .querySelectorAll("section[id]")
+      .forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, [setHash]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +48,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center backdrop-blur-md md:px-12 md:py-6 px-4 py-6 justify-between z-100">
+    <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center backdrop-blur-xs md:px-12 md:py-6 px-4 py-6 justify-between z-100">
       <Link href={""}>
         <Image
           width={1280}
@@ -35,7 +58,7 @@ export default function NavBar() {
           className="md:w-26 w-22 "
         />
       </Link>
-      <section>
+      <div>
         {showTabs ? (
           <span onClick={() => setShowTabs(false)}>
             <XMark className="md:hidden icon" />
@@ -45,10 +68,10 @@ export default function NavBar() {
             <Bars className="md:hidden icon" />
           </span>
         )}
-      </section>
+      </div>
 
       {showTabs ? (
-        <section className="items-center gap-6 flex flex-wrap ">
+        <div className="items-center gap-6 flex flex-wrap ">
           {Tabs.map(({ name, hash }) => (
             <a
               href={`#${hash}`}
@@ -63,7 +86,7 @@ export default function NavBar() {
               </span>
             </a>
           ))}
-        </section>
+        </div>
       ) : null}
     </nav>
   );

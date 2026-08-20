@@ -1,7 +1,7 @@
-import { MapPin, Phone, RedNote, Tiktok } from "@/svg";
+import { Instagram, MapPin, Phone, RedNote, Tiktok } from "@/svg";
 
 export const Tabs = [
-  { name: "home", hash: "" },
+  { name: "home", hash: "home" },
   { name: "service", hash: "service" },
   { name: "contact us", hash: "contact-us" },
 ];
@@ -27,33 +27,38 @@ export const HeroBadges = [
     svg: MapPin,
   },
   {
-    text: "+66 666 666 66",
-    href: "tel:",
+    text: "+66 987 197 874",
+    href: "tel:+66987197874",
     svg: Phone,
   },
   {
     text: "M&M",
     href: "",
-
     svg: Tiktok,
   },
 ];
 export const Contacts = [
   {
-    text: "Map",
+    text: "Location",
     href: "https://maps.app.goo.gl/ej9AoXwP7tEUGVTq9?g_st=ic",
     svg: MapPin,
   },
   {
     text: "WhatsApp",
-    href: "tel:",
+    href: "https://wa.me/+66987197874",
     svg: Phone,
+  },
+  {
+    text: "Instagram",
+    href: "https://www.instagram.com/thainurumassagr?igsh=Z2UyZ2JuYW5oOWJv&igsi=Z2UyZ2JuYW5oOWJv",
+    svg: Instagram,
   },
   {
     text: "TikTok",
     href: "",
     svg: Tiktok,
   },
+
   {
     text: "RedNote",
     href: "",

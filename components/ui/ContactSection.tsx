@@ -9,18 +9,18 @@ export default function ContactSection() {
       className="flex flex-col h-screen items-center   justify-center md:gap-[2%] gap-[3%] backdrop-blur-sm"
       id="contact-us"
     >
-      <section className=" flex flex-col items-center justify-end grow md:gap-2 gap-3">
+      <header className=" flex flex-col items-center justify-end grow md:gap-2 gap-3">
         <h1 className="title">Contact Us</h1>
-        <section className="flex flex-col items-center opacity-80 font-semibold md:text-lg text-sm">
+        <div className="flex flex-col items-center opacity-80 font-semibold md:text-lg text-sm">
           <p>STILL THINKING?</p>
           <p>Why not make it one click and contact us?</p>
-          <section className="flex flex-wrap items-center justify-center md:gap-5 gap-2 items-center mt-3">
+          <div className="flex flex-wrap items-center justify-center md:gap-5 gap-2 items-center mt-3">
             {Contacts.map((contact, i) => (
               <BadgeFullColor {...contact} key={`contact-${i}`} />
             ))}
-          </section>
-        </section>
-      </section>
+          </div>
+        </div>
+      </header>
       <span className="relative w-fit h-fit bg ">
         <Image
           width={760}
