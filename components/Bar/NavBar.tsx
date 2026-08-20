@@ -25,7 +25,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center bg-white/1 backdrop-blur-md md:px-12 md:py-6 px-4 py-6 justify-between z-100">
+    <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center backdrop-blur-md md:px-12 md:py-6 px-4 py-6 justify-between z-100">
       <Link href={""}>
         <Image
           width={1280}

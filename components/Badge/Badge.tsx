@@ -1,18 +1,18 @@
 import { IconProps } from "@/svg";
+import Link from "next/link";
 import React, { createElement, ReactNode } from "react";
 
 interface Props {
-  className?: string;
   text: string;
-  link: string;
+  href: string;
   svg: (props: IconProps) => ReactNode;
 }
 
-export default function Badge({ className, text, svg }: Props) {
+export default function Badge({ text, href, svg }: Props) {
   return (
-    <div className="flex items-center gap-1 opacity-75">
+    <Link href={href} className="flex items-center gap-1 opacity-75">
       <span>{createElement(svg, { className: "icon-sm" })} </span>
       <span className="text-base md:text-lg">{text}</span>
-    </div>
+    </Link>
   );
 }
