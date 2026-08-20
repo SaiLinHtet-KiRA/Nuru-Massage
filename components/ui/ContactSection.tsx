@@ -6,7 +6,7 @@ import BadgeFullColor from "../Badge/BadgeFullColor";
 export default function ContactSection() {
   return (
     <section
-      className="flex flex-col h-screen items-center   justify-center md:gap-[2%] gap-[3%] backdrop-blur-sm"
+      className="flex flex-col max-h-screen items-center   justify-center md:gap-[2%] gap-[3%] backdrop-blur-sm "
       id="contact-us"
     >
       <header className=" flex flex-col items-center justify-end grow md:gap-2 gap-3">

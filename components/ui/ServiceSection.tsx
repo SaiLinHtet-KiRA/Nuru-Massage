@@ -22,10 +22,10 @@ export default function ServiceSection() {
   return (
     <>
       <section
-        className="grid md:grid-cols-[50%_60%] md:grid-rows-1 grid-cols-1 grid-rows-[40%_60%] h-screen w-screen items-center gap-0  z-10 relative "
+        className="grid md:grid-cols-[50%_60%] md:grid-rows-1 grid-cols-1 grid-rows-[60%_40%] h-screen w-screen items-center gap-0  z-10 relative "
         id="service"
       >
-        <header className="flex flex-col font-bold z-10 md:m-0 mb-[2%] self-end md:self-auto justify-self-center md:items-start items-center ">
+        <header className="flex flex-col font-bold z-10 md:m-0 mb-[2%] self-center md:self-auto justify-self-center md:items-start items-center">
           <h1 className="title">Our Service</h1>
           <span className="md:text-xl text-md">
             Choose Your Dream Room And Your Dream Girls
@@ -44,7 +44,7 @@ export default function ServiceSection() {
             ))}
           </div>
         </header>
-        <span className="md:relative absolute md:h-full md:-left-[25%] left-0 md:w-full md:bottom-0 bottom-20  justify-self-center -z-1">
+        <span className="md:relative absolute md:h-full md:-left-[25%] left-0 md:w-full bottom-[16svh] w-[60svh]   justify-self-center -z-1 ">
           <Image
             width={760}
             height={480}

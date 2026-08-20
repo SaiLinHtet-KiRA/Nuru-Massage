@@ -13,7 +13,7 @@ export default function HeroSection() {
         <h5 className="text-xl md:text-2xl">Relax | Rejuvenate | Renew </h5>
         <BadageContainer />
       </header>
-      <span className="md:relative absolute md:h-[80%] md:w-full  justify-self-center aspect-square w-screen -z-1 scale-100 bottom-0 self-end">
+      <span className="md:relative absolute md:h-[80%] md:w-full  justify-self-center aspect-square w-screen -z-1 bottom-0 self-end">
         <Image
           width={760}
           height={480}
