@@ -5,5 +5,6 @@ export interface Room {
 
 export interface Rooms {
   name: string;
+  color: string;
   rooms: Room[];
 }

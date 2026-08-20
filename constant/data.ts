@@ -8,6 +8,7 @@ export const Tabs = [
 export const Rooms = [
   {
     name: "nuru massage room",
+    color: "gold",
     rooms: [
       { price: 4000, minute: 60 },
       { price: 5500, minute: 90 },
@@ -15,6 +16,7 @@ export const Rooms = [
   },
   {
     name: "aroma massage room",
+    color: "silver",
     rooms: [{ price: 3000, minute: 60 }],
   },
 ];

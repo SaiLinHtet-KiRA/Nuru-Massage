@@ -8,10 +8,8 @@ export default function HeroSection() {
       id="home"
     >
       <section className="font-bold z-10 md:m-0 mb-[2%] self-end md:self-auto justify-self-center  ">
-        <h1 className="text-3xl md:text-4xl text-primary">M&M</h1>
-        <h1 className="text-3xl md:text-4xl text-primary">
-          NURU MASSAGE & BAR
-        </h1>
+        <h1 className="title">M&M</h1>
+        <h1 className="title">NURU MASSAGE & BAR</h1>
         <h5 className="text-xl md:text-2xl">Relax | Rejuvenate | Renew </h5>
         <BadageContainer />
       </section>

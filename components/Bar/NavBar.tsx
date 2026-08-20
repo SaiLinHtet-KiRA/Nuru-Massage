@@ -48,7 +48,7 @@ export default function NavBar() {
       </section>
 
       {showTabs ? (
-        <section className=" items-center gap-6 flex flex-wrap ">
+        <section className="items-center gap-6 flex flex-wrap ">
           {Tabs.map(({ name, hash }) => (
             <a
               href={`#${hash}`}
