@@ -45,7 +45,7 @@ export const Contacts = [
   },
   {
     text: "WhatsApp",
-    href: "https://wa.me/+66987197874",
+    href: "https://wa.me/message/A7ZGGQ65AFQ4H1",
     svg: Phone,
   },
   {
