@@ -1,24 +1,9 @@
-"use client";
-
 import { Rooms } from "@/constant/data";
 import Image from "next/image";
 import CardContainer from "./CardContainer";
-import PopUpModal from "./PopUpModal";
-import { useEffect, useState } from "react";
+import SeeMenu from "../button/SeeMenu";
 
 export default function ServiceSection() {
-  const [showModal, setShowModal] = useState<boolean>(false);
-  useEffect(() => {
-    if (showModal) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-
-    return () => {
-      document.body.classList.remove("overflow-hidden");
-    };
-  }, [showModal]);
   return (
     <>
       <section
@@ -26,17 +11,11 @@ export default function ServiceSection() {
         id="service"
       >
         <header className="flex flex-col font-bold z-10 md:m-0 mb-[2%] self-center md:self-auto justify-self-center md:items-start items-center">
-          <h1 className="title">Our Service</h1>
-          <span className="md:text-xl text-md">
+          <h6>Our Service</h6>
+          <h5 className="title-sm">
             Choose Your Dream Room And Your Dream Girls
-          </span>
-          <h1
-            className="text-sm md:text-sm cursor-pointer font-bold text-background mt-3 opacity-80 bg-primary rounded-lg md:px-2 md:py-0.5 px-3 py-1.5
-        hover:opacity-100 active:opacity-100"
-            onClick={() => setShowModal(true)}
-          >
-            See Menu
-          </h1>
+          </h5>
+          <SeeMenu className="flex items-center bg-primary rounded-lg md:px-2 md:py-0.5 px-3 py-1.5 mt-3 opacity-80 hover:opacity-100 active:opacity-100 text-background cursor-pointer font-bold text" />
 
           <div className="flex flex-col md:gap-2 gap-3 md:mt-3 mt-6">
             {Rooms.map((room, i) => (
@@ -44,7 +23,7 @@ export default function ServiceSection() {
             ))}
           </div>
         </header>
-        <span className="md:relative absolute md:h-full md:-left-[25%] left-0 md:w-full bottom-[16svh] w-[60svh]   justify-self-center -z-1 ">
+        <span className="md:relative absolute md:h-full md:-left-[25%] left-0 md:w-full md:bottom-0 bottom-[16svh] w-[60svh]   justify-self-center -z-1 ">
           <Image
             width={760}
             height={480}
@@ -55,21 +34,6 @@ export default function ServiceSection() {
           <span className="linear-gradient" />
         </span>
       </section>
-      {showModal && (
-        <PopUpModal
-          Close={() => {
-            setShowModal(false);
-          }}
-        >
-          <Image
-            width={560}
-            height={560}
-            src={"/menu.webp"}
-            alt=""
-            className="md:w-[50svh] w-[45svh]"
-          />
-        </PopUpModal>
-      )}
     </>
   );
 }
