@@ -3,6 +3,7 @@ import HeroSection from "@/components/ui/HeroSection";
 import PopUpModal from "@/components/ui/PopUpModal";
 import ServiceSection from "@/components/ui/ServiceSection";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Page() {
   return (
@@ -10,15 +11,17 @@ export default function Page() {
       <HeroSection />
       <ServiceSection />
       <ContactSection />
-      <PopUpModal>
-        <Image
-          width={560}
-          height={560}
-          src={"/menu.webp"}
-          alt=""
-          className="md:w-[50svh] w-[45svh]"
-        />
-      </PopUpModal>
+      <Suspense>
+        <PopUpModal>
+          <Image
+            width={560}
+            height={560}
+            src={"/menu.webp"}
+            alt=""
+            className="md:w-[50svh] w-[45svh]"
+          />
+        </PopUpModal>
+      </Suspense>
     </main>
   );
 }
