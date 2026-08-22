@@ -23,14 +23,14 @@ export const Rooms = [
 export const HeroBadges = [
   {
     text: "Bangkok,Thailand",
-    href: "https://maps.app.goo.gl/ej9AoXwP7tEUGVTq9?g_st=ic",
+    href: "https://maps.app.goo.gl/aqbEedZWhrTk4jSn6",
     svg: MapPin,
   },
 ];
 export const Contacts = [
   {
     text: "Location",
-    href: "https://maps.app.goo.gl/ej9AoXwP7tEUGVTq9?g_st=ic",
+    href: "https://maps.app.goo.gl/aqbEedZWhrTk4jSn6",
     svg: MapPin,
   },
   {
