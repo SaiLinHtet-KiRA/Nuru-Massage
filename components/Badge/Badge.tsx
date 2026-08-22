@@ -10,9 +10,9 @@ interface Props {
 
 export default function Badge({ text, href, svg }: Props) {
   return (
-    <Link href={href} className="flex items-center gap-1 opacity-75">
+    <Link href={href} className="flex items-center gap-1">
       <span>{createElement(svg, { className: "icon-sm" })} </span>
-      <span className="text-base md:text-lg">{text}</span>
+      <span className="text">{text}</span>
     </Link>
   );
 }

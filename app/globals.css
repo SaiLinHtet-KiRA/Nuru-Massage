@@ -24,14 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* *::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none;
-} */
+}
 
-/* Hide scrollbar for IE, Edge and Firefox */
 * {
-  -ms-overflow-style: none; /* Edge and IE */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   user-select: none;
   scroll-behavior: smooth;
   @apply transition-all duration-200 ease-in-out;
@@ -43,11 +42,14 @@ section {
 
 @layer components {
   .linear-gradient {
-    background: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 0),
-      var(--background) 90%
-    );
+    background:
+      radial-gradient(
+        ellipse at left bottom,
+        var(--background) 1%,
+        transparent,
+        transparent
+      ),
+      linear-gradient(to right, var(--background) 1%, transparent, transparent);
     @apply absolute inset-0;
   }
   .icon {
@@ -56,7 +58,24 @@ section {
   .icon-sm {
     @apply size-6 stroke-primary md:size-8;
   }
-  .title {
-    @apply text-3xl md:text-4xl text-primary;
+  h6 {
+    @apply text-3xl md:text-[3svw] text-primary;
+  }
+  h5 {
+    @apply text-lg md:text-[1.5svw];
+  }
+  .text {
+    @apply text-base md:text-[1.2svw];
+  }
+}
+@media (max-width: 600px) {
+  .linear-gradient {
+    background: linear-gradient(
+      to top,
+      var(--background) 5%,
+      transparent,
+      transparent
+    );
+    @apply absolute inset-0;
   }
 }

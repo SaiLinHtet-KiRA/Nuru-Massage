@@ -10,7 +10,7 @@ export default function Roomcard({
   return (
     <div
       className={clsx(
-        "flex md:border-2 border md:1 md:px-3 px-2 md:py-1.5 py-1 md:gap-3 gap-2 rounded-lg backdrop-blur-lg md:text-md text-sm items-center",
+        "flex md:border-2 border md:1 md:px-3 px-2 md:py-1.5 py-1 md:gap-3 gap-2 rounded-lg backdrop-blur-lg text items-center text-sm",
         className,
       )}
     >
