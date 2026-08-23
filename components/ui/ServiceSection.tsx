@@ -7,7 +7,7 @@ export default function ServiceSection() {
   return (
     <>
       <section
-        className="grid md:grid-cols-[50%_60%] md:grid-rows-1 grid-cols-1 grid-rows-[70%_30%]  h-svh w-screen items-center gap-0  z-10 relative "
+        className="grid md:grid-cols-[50%_60%] md:grid-rows-1 grid-cols-1 grid-rows-[70%_30%]   h-svh w-screen items-center gap-0  z-10 relative "
         id="service"
       >
         <header className="flex  flex-col font-bold z-10 md:m-0 mb-[2%] self-center md:self-auto justify-self-center md:items-start items-center">
