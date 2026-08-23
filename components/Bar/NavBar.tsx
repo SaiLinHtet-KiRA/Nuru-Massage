@@ -49,13 +49,13 @@ export default function NavBar() {
 
   return (
     <nav className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center backdrop-blur-xs md:px-12 md:py-6 px-4 py-6 justify-between z-100">
-      <Link href={""}>
+      <Link href={""} className="md:w-26 w-22 aspect-square relative">
         <Image
           width={1280}
           height={853}
           src="/logo.webp"
-          alt="M&M NURU MASSAGE & BAR"
-          className="md:w-26 w-22 "
+          alt="M&M NURU MASSAGE & BAR Logo"
+          className="absolute inset-0 object-cover"
         />
       </Link>
       <div>

@@ -13,13 +13,15 @@ export default function Page() {
       <ContactSection />
       <Suspense>
         <PopUpModal>
-          <Image
-            width={560}
-            height={560}
-            src={"/menu.webp"}
-            alt=""
-            className="md:w-[50svh] w-[45svh]"
-          />
+          <div className="md:w-[50svh] w-[45svh] relative aspect-[17/25] ">
+            <Image
+              width={560}
+              height={560}
+              src={"/menu.webp"}
+              alt=""
+              className="absolute inset-0 object-cover"
+            />
+          </div>
         </PopUpModal>
       </Suspense>
     </main>

@@ -20,13 +20,13 @@ export default function ContactSection() {
           </div>
         </div>
       </header>
-      <span className="relative w-fit h-fit bg ">
+      <span className="relative w-[50svh] aspect-[1.033/1] h-auto ">
         <Image
           width={760}
           height={480}
           src="/model-1.png"
           alt=""
-          className="w-[40svh]"
+          className="absolute w-full h-full top-0 left-0 object-contain"
         />
         <span className="linear-gradient" />
       </span>
