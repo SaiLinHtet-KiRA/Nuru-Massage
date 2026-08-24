@@ -40,15 +40,13 @@ section {
 
 @layer components {
   .linear-gradient {
-    background:
-      radial-gradient(
-        ellipse at left bottom,
-        var(--background) 1%,
-        transparent,
-        transparent
-      ),
-      linear-gradient(to right, var(--background) 1%, transparent, transparent);
-    @apply absolute inset-0;
+    background: radial-gradient(
+      circle at center,
+      var(--color-background) 10%,
+      transparent,
+      transparent
+    );
+    @apply absolute inset-0  md:scale-125 scale-150 -z-1;
   }
   .icon {
     @apply size-8 stroke-primary md:size-16;
@@ -69,7 +67,7 @@ section {
     @apply transition-all duration-200 ease-in-out;
   }
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .linear-gradient {
     background: linear-gradient(
       to top,
@@ -79,4 +77,4 @@ section {
     );
     @apply absolute inset-0;
   }
-}
+} */

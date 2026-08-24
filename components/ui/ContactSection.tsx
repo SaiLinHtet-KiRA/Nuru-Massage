@@ -5,6 +5,7 @@ import { textVariants } from "@/style/SlideIn";
 import MotionImage from "./MotionImage";
 import { motion } from "motion/react";
 import { imageVariants } from "@/style/FeedIn";
+import Map from "./Map";
 
 export default function ContactSection() {
   return (
@@ -31,18 +32,8 @@ export default function ContactSection() {
         </div>
       </motion.header>
       <span className="relative w-[50svh] aspect-[1.033/1] h-auto ">
-        <MotionImage
-          variants={imageVariants}
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ amount: 0.8 }}
-          width={760}
-          height={480}
-          src="/model-1.png"
-          alt=""
-          className="absolute w-full h-full  object-contain "
-        />
-        <span className="linear-gradient" />
+        <Map />
+        {/* <span className="linear-gradient" /> */}
       </span>
     </section>
   );

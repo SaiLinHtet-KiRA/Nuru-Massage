@@ -3,6 +3,10 @@ import { Instagram, MapPin, Phone, RedNote, Tiktok } from "@/svg";
 export const Tabs = [
   { name: "home", hash: "home" },
   { name: "service", hash: "service" },
+  { name: "about us", hash: "about-us" },
+  { name: "gallery", hash: "gallery" },
+
+  { name: "location", hash: "location" },
   { name: "contact us", hash: "contact-us" },
 ];
 export const Rooms = [

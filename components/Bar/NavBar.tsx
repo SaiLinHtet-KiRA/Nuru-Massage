@@ -1,11 +1,11 @@
 "use client";
-import { Tabs } from "@/constant/data";
+import { Contacts, Tabs } from "@/constant/data";
 import { useHash } from "@/hook/useHash";
 import { Bars, XMark } from "@/svg";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import clsx from "clsx";
 
 export default function NavBar() {
   const [showTabs, setShowTabs] = useState(false);
@@ -47,7 +47,9 @@ export default function NavBar() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  if (currentHash == "service") {
+    return null;
+  }
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -56,17 +58,11 @@ export default function NavBar() {
         duration: 1,
         ease: "linear",
       }}
-      className="fixed w-screen top-0 flex md:flex-nowrap flex-wrap  items-center backdrop-blur-xs md:px-12 md:py-6 px-4 py-6 justify-between z-100"
+      className={clsx(
+        "fixed w-screen top-0 flex md:flex-nowrap flex-wrap md:gap-0 gap-4 items-center backdrop-blur-xs md:px-12 md:py-6 px-4 py-6 md:justify-between z-100",
+        showTabs ? "justify-center" : "justify-between",
+      )}
     >
-      <Link href={""} className="md:w-26 w-22 aspect-[1/0.6] relative  ">
-        <Image
-          width={1280}
-          height={853}
-          src="/logo.webp"
-          alt="M&M NURU MASSAGE & BAR Logo"
-          className="absolute inset-0 object-cover"
-        />
-      </Link>
       <div>
         {showTabs ? (
           <span onClick={() => setShowTabs(false)}>
@@ -87,7 +83,7 @@ export default function NavBar() {
               key={name}
               className="w-screen md:w-fit text-center relative z-1"
             >
-              <span className="relative capitalize font-semibold text-lg ">
+              <span className="relative uppercase tracking-wide font-medium text-lg ">
                 {name}
                 {currentHash == hash && (
                   <motion.span
@@ -105,6 +101,15 @@ export default function NavBar() {
             </a>
           ))}
         </div>
+      )}
+      {!showTabs && (
+        <Link
+          href={Contacts[1].href}
+          className="px-6 py-1 text border-2 border-primary md:text-primary rounded-full font-bold md:bg-transparent bg-primary text-foreground"
+          target="_blank"
+        >
+          Book Now
+        </Link>
       )}
     </motion.nav>
   );

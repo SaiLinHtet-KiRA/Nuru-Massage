@@ -1,5 +1,6 @@
 import ContactSection from "@/components/ui/ContactSection";
 import HeroSection from "@/components/ui/HeroSection";
+import Location from "@/components/ui/Location";
 import PopUpModal from "@/components/ui/PopUpModal";
 import ServiceSection from "@/components/ui/ServiceSection";
 import Image from "next/image";
@@ -10,6 +11,7 @@ export default function Page() {
     <main className="h-dvh snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth">
       <HeroSection />
       <ServiceSection />
+      <Location />
       <ContactSection />
       <Suspense>
         <PopUpModal>
