@@ -7,7 +7,7 @@ import { Suspense } from "react";
 
 export default function Page() {
   return (
-    <main className="h-dvh snap-y snap-mandatory overflow-y-auto overflow-x-hidden">
+    <main className="h-dvh snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth">
       <HeroSection />
       <ServiceSection />
       <ContactSection />

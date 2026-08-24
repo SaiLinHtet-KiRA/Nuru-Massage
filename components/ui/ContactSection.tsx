@@ -1,6 +1,10 @@
+"use client";
 import { Contacts } from "@/constant/data";
-import Image from "next/image";
 import BadgeFullColor from "../Badge/BadgeFullColor";
+import { textVariants } from "@/style/SlideIn";
+import MotionImage from "./MotionImage";
+import { motion } from "motion/react";
+import { imageVariants } from "@/style/FeedIn";
 
 export default function ContactSection() {
   return (
@@ -8,7 +12,13 @@ export default function ContactSection() {
       className="flex flex-col h-svh items-center   justify-center md:gap-[2%] gap-[3%] backdrop-blur-sm "
       id="contact-us"
     >
-      <header className=" flex flex-col items-center justify-end grow md:gap-2 gap-3">
+      <motion.header
+        variants={textVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ amount: 0.8 }}
+        className=" flex flex-col items-center justify-end grow md:gap-2 gap-3"
+      >
         <h6>Contact Us</h6>
         <div className="flex flex-col items-center opacity-80 font-semibold md:text-lg text-sm">
           <p className="text">STILL THINKING?</p>
@@ -19,14 +29,18 @@ export default function ContactSection() {
             ))}
           </div>
         </div>
-      </header>
+      </motion.header>
       <span className="relative w-[50svh] aspect-[1.033/1] h-auto ">
-        <Image
+        <MotionImage
+          variants={imageVariants}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ amount: 0.8 }}
           width={760}
           height={480}
           src="/model-1.png"
           alt=""
-          className="absolute w-full h-full top-0 left-0 object-contain"
+          className="absolute w-full h-full  object-contain !ease-linear"
         />
         <span className="linear-gradient" />
       </span>

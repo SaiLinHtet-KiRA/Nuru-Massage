@@ -32,7 +32,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   user-select: none;
-  scroll-behavior: smooth;
+
   @apply transition-all duration-200 ease-in-out;
 }
 

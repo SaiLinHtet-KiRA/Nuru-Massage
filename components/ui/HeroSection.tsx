@@ -2,8 +2,8 @@
 import Image from "next/image";
 import BadageContainer from "../container/BadageContainer";
 import { motion } from "motion/react";
-
-const MotionImage = motion(Image);
+import { imageVariants, textVariants } from "@/style/SlideIn";
+import MotionImage from "./MotionImage";
 
 export default function HeroSection() {
   return (
@@ -12,13 +12,10 @@ export default function HeroSection() {
       id="home"
     >
       <motion.header
-        initial={{ y: 5, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.5,
-          ease: "linear",
-        }}
+        variants={textVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ amount: 0.8 }}
         className="font-bold z-10 md:m-0 mb-[2%] self-auto justify-self-center md:row-start-1 row-start-2 row-end-2 md:pl-[10%] pl-0 !ease-linear"
       >
         <h6>M&M</h6>
@@ -28,16 +25,15 @@ export default function HeroSection() {
       </motion.header>
       <span className=" relative overflow-hidden h-[80%] md:w-full  aspect-square w-screen -z-1  self-end md:row-start-1 row-start-1 row-end-1 ">
         <MotionImage
-          initial={{ top: 5, opacity: 0 }}
-          animate={{ top: 0, opacity: 1 }}
-          transition={{
-            duration: 0.5,
-            ease: "linear",
-          }}
+          variants={imageVariants}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ amount: 0.8 }}
           width={760}
           height={480}
           src="/model.webp"
           alt=""
+          loading="eager"
           className="absolute inset-0 object-cover  w-full h-full  top-0 !transition-none"
         />
         <span className="linear-gradient" />
