@@ -13,7 +13,7 @@ export default function BookNow() {
           width={1080}
           height={960}
           alt=""
-          src="/lotus.png"
+          src="/lotus.webp"
           className="absolute w-full h-full inset-0 object-cover"
         />
       </div>

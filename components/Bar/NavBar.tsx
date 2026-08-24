@@ -102,15 +102,14 @@ export default function NavBar() {
           ))}
         </div>
       )}
-      {!showTabs && (
-        <Link
-          href={Contacts[1].href}
-          className="px-6 py-1 text border-2 border-primary md:text-primary rounded-full font-bold md:bg-transparent bg-primary text-foreground"
-          target="_blank"
-        >
-          Book Now
-        </Link>
-      )}
+
+      <Link
+        href={Contacts[1].href}
+        className="px-6 py-1 text border-2 border-primary md:text-primary rounded-full font-bold md:bg-transparent bg-primary text-foreground"
+        target="_blank"
+      >
+        Book Now
+      </Link>
     </motion.nav>
   );
 }

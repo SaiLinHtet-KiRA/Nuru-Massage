@@ -13,7 +13,7 @@ export default function ServiceSection() {
         viewport={{ amount: 0.8 }}
         width={760}
         height={480}
-        src="/menu.jpg"
+        src="/menu.webp"
         alt="M&M Nuru Maasge Menu"
         className="absolute inset-0 w-full h-full md:w-[65svh] md:h-auto m-auto"
       />

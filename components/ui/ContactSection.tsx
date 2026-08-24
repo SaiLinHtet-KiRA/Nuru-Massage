@@ -10,7 +10,7 @@ import Map from "./Map";
 export default function ContactSection() {
   return (
     <section
-      className="flex flex-col h-svh items-center   justify-center md:gap-[2%] gap-[3%] backdrop-blur-sm "
+      className="flex flex-col h-svh items-center justify-center md:gap-[2%] gap-[3%] backdrop-blur-sm "
       id="contact-us"
     >
       <motion.header
@@ -31,7 +31,7 @@ export default function ContactSection() {
           </div>
         </div>
       </motion.header>
-      <span className="relative w-[50svh] aspect-[1.033/1] h-auto ">
+      <span className="relative w-[50svh] aspect-[1.033/1] h-auto mb-10">
         <Map />
         {/* <span className="linear-gradient" /> */}
       </span>
