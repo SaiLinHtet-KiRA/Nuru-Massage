@@ -13,7 +13,7 @@ export default function BadgeFullColor({ text, href, svg }: Props) {
     <Link
       href={href}
       target="_blank"
-      className=" flex items-center gap-1  bg-primary px-3 py-2 md:rounded-2xl rounded-lg hover:scale-110 active:scale-90  "
+      className=" flex items-center gap-1  bg-primary px-3 py-2 md:rounded-2xl rounded-lg default-transition hover:scale-110 active:scale-90  "
     >
       <span>
         {createElement(svg, { className: "icon-sm stroke-background" })}

@@ -9,7 +9,7 @@ export default function BadageContainer() {
         <Badge {...info} key={"badge-" + i} />
       ))}
       <SeeMenu
-        className="text cursor-pointer flex items-center gap-1 opacity-80 active:opacity-100 active:scale-110 hover:scale-110"
+        className="text cursor-pointer flex items-center gap-1 opacity-80 default-transition active:opacity-100 active:scale-110 hover:scale-110"
         showSvg={true}
       />
     </div>

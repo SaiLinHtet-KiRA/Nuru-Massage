@@ -32,8 +32,6 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   user-select: none;
-
-  @apply transition-all duration-200 ease-in-out;
 }
 
 section {
@@ -66,6 +64,9 @@ section {
   }
   .text {
     @apply text-base md:text-[1.2svw];
+  }
+  .default-transition {
+    @apply transition-all duration-200 ease-in-out;
   }
 }
 @media (max-width: 600px) {

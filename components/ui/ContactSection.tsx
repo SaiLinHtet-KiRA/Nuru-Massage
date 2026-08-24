@@ -40,7 +40,7 @@ export default function ContactSection() {
           height={480}
           src="/model-1.png"
           alt=""
-          className="absolute w-full h-full  object-contain !ease-linear"
+          className="absolute w-full h-full  object-contain "
         />
         <span className="linear-gradient" />
       </span>

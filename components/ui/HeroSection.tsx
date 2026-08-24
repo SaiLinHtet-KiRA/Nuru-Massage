@@ -16,7 +16,7 @@ export default function HeroSection() {
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ amount: 0.8 }}
-        className="font-bold z-10 md:m-0 mb-[2%] self-auto justify-self-center md:row-start-1 row-start-2 row-end-2 md:pl-[10%] pl-0 !ease-linear"
+        className="font-bold z-10 md:m-0 mb-[2%] self-auto justify-self-center md:row-start-1 row-start-2 row-end-2 md:pl-[10%] pl-0 "
       >
         <h6>M&M</h6>
         <h6>NURU MASSAGE & BAR</h6>
@@ -34,7 +34,7 @@ export default function HeroSection() {
           src="/model.webp"
           alt=""
           loading="eager"
-          className="absolute inset-0 object-cover  w-full h-full  top-0 !transition-none"
+          className="absolute inset-0 object-cover  w-full h-full  top-0"
         />
         <span className="linear-gradient" />
       </span>

@@ -17,11 +17,11 @@ export default function ServiceSection() {
         variants={textVariants}
         initial="offscreen"
         whileInView="onscreen"
-        className="!ease-linear flex  flex-col font-bold z-10 md:m-0 mb-[2%] self-center md:self-auto justify-self-center md:items-start items-center"
+        className=" flex  flex-col font-bold z-10 md:m-0 mb-[2%] self-center md:self-auto justify-self-center md:items-start items-center"
       >
         <h6>Our Service</h6>
         <h5 className="text">Choose Your Dream Room And Your Dream Girls</h5>
-        <SeeMenu className="flex items-center bg-primary rounded-lg md:px-2 md:py-0.5 px-3 py-1.5 mt-3 opacity-80 hover:scale-110 active:scale-100 hover:opacity-100 active:opacity-100 text-background cursor-pointer font-bold text" />
+        <SeeMenu className="flex items-center bg-primary rounded-lg md:px-2 md:py-0.5 px-3 py-1.5 mt-3 opacity-80 default-transition default-transition hover:scale-110 active:scale-100 hover:opacity-100 active:opacity-100 text-background cursor-pointer font-bold text" />
 
         <div className="flex flex-col md:gap-2 gap-3 md:mt-3 mt-6">
           {Rooms.map((room, i) => (
@@ -39,7 +39,7 @@ export default function ServiceSection() {
           height={480}
           src="/room.png"
           alt=""
-          className=" inset-0 object-fit w-full h-full top-0 !ease-linear"
+          className=" inset-0 object-fit w-full h-full top-0 "
         />
         <span className="linear-gradient" />
       </span>
