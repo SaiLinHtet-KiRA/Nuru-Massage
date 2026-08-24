@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "M&M | Nuru Massage & Bar",
   description:
-    "Discover M&M | Nuru Massage & Bar in Bangkok, near Khaosan Road.Best Massage in Thailand .Enjoy a welcoming atmosphere and a relaxing massage experience in a comfortable setting. Perfect for visitors looking to unwind and enjoy a memorable experience in Bangkok.Girls are waiting for you guys",
+    "Discover M&M | Nuru Massage & Bar in Bangkok, near Kasap Road.Best Massage in Thailand .Enjoy a welcoming atmosphere and a relaxing massage experience in a comfortable setting. Perfect for visitors looking to unwind and enjoy a memorable experience in Bangkok.Girls are waiting for you guys",
   keywords: [
     "Molly Nuru Massage & Bar",
     "M&M Nuru Massage & Bar",
