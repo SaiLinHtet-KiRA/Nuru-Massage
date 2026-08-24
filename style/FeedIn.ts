@@ -7,7 +7,7 @@ export const imageVariants: Variants = {
   onscreen: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
       ease: "linear",
     },
   },
