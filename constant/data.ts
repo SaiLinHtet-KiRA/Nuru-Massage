@@ -45,7 +45,7 @@ export const Contacts = [
   },
   {
     text: "TikTok",
-    href: "",
+    href: "https://www.tiktok.com/@mnm.nurumassagenbar?_r=1&_t=ZS-998xExOfn1x",
     svg: Tiktok,
   },
 
