@@ -9,6 +9,7 @@ declare global {
         TranslateElement: new (
           options: {
             pageLanguage: string;
+            includedLanguages?: string;
             autoDisplay: boolean;
           },
           elementId: string,
@@ -21,17 +22,23 @@ declare global {
 
 export default function GoogleTranslate() {
   useEffect(() => {
+    const browserLanguage = navigator.language.split("-")[0].toLowerCase();
+    console.log("browserLanguage-", browserLanguage);
+    // Don't translate if the browser is already English.
+    if (browserLanguage === "en") {
+      return;
+    }
+
     window.googleTranslateElementInit = () => {
       const TranslateElement = window.google?.translate?.TranslateElement;
 
-      if (!TranslateElement) {
-        return;
-      }
+      if (!TranslateElement) return;
 
       new TranslateElement(
         {
           pageLanguage: "en",
-          autoDisplay: false,
+          includedLanguages: browserLanguage,
+          autoDisplay: true,
         },
         "google_translate_element",
       );
@@ -45,7 +52,7 @@ export default function GoogleTranslate() {
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      script.remove();
       delete window.googleTranslateElementInit;
     };
   }, []);

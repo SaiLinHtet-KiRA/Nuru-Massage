@@ -49,7 +49,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Analytics />
         <NavBar />
         {children}
-        <GoogleTranslate />
       </body>
     </html>
   );
