@@ -3,6 +3,7 @@ import { Tangerine } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/Bar/NavBar";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const tangerine = Tangerine({
   weight: ["400", "700"],
@@ -34,9 +35,30 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${tangerine.variable}  h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <div id="google_translate_element" />
         <Analytics />
         <NavBar />
         {children}
+        <Script
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            window.googleTranslateElementInit = function () {
+              new window.google.translate.TranslateElement(
+                {
+                  pageLanguage: "en",
+                  includedLanguages: "en,th,zh-CN,ja,ko",
+                  layout:
+                    window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+                },
+                "google_translate_element"
+              );
+            };
+          `}
+        </Script>
       </body>
     </html>
   );
