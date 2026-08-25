@@ -1,4 +1,4 @@
-import { Instagram, MapPin, Phone, RedNote, Tiktok } from "@/svg";
+import { Instagram, MapPin, Phone, RedNote, Tiktok, Youtube } from "@/svg";
 
 export const Tabs = [
   { name: "home", hash: "home" },
@@ -44,6 +44,11 @@ export const Contacts = [
     text: "Instagram",
     href: "https://www.instagram.com/thainurumassagr?igsh=Z2UyZ2JuYW5oOWJv&igsi=Z2UyZ2JuYW5oOWJv",
     svg: Instagram,
+  },
+  {
+    text: "YouTube",
+    href: "https://www.instagram.com/thainurumassagr?igsh=Z2UyZ2JuYW5oOWJv&igsi=Z2UyZ2JuYW5oOWJv",
+    svg: Youtube,
   },
   {
     text: "TikTok",

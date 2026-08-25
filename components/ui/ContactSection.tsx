@@ -24,7 +24,7 @@ export default function ContactSection() {
         <div className="flex flex-col items-center opacity-80 font-semibold md:text-lg text-sm">
           <p className="text">STILL THINKING?</p>
           <p className="text">Why not make it one click and contact us?</p>
-          <div className="flex flex-wrap items-center justify-center md:gap-5 gap-2 items-center mt-3">
+          <div className="flex flex-wrap items-center justify-center md:gap-5 gap-2 items-center mt-3 ">
             {Contacts.map((contact, i) => (
               <BadgeFullColor {...contact} key={`contact-${i}`} />
             ))}
