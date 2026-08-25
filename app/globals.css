@@ -14,9 +14,7 @@
   --color-primary: var(--primary-color);
   --color-gold: var(--gold-color);
   --color-silver: var(--silver-color);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-tangerine: var(--font-tangerine);
 }
 
 body {
@@ -58,7 +56,7 @@ section {
     @apply text-3xl md:text-[3svw] text-primary;
   }
   h5 {
-    @apply text-lg md:text-[1.5svw];
+    @apply text-xl md:text-[2svw];
   }
   .text {
     @apply text-base md:text-[1.2svw];

@@ -5,8 +5,6 @@ export const Tabs = [
   { name: "service", hash: "service" },
   { name: "about us", hash: "about-us" },
   { name: "gallery", hash: "gallery" },
-
-  { name: "location", hash: "location" },
   { name: "contact us", hash: "contact-us" },
 ];
 export const Rooms = [
@@ -58,4 +56,13 @@ export const Contacts = [
     href: "",
     svg: RedNote,
   },
+];
+
+export const Images = [
+  "/Image/1.jpg",
+  "/Image/2.jpg",
+  "/Image/3.jpg",
+  "/Image/1.jpg",
+  "/Image/2.jpg",
+  "/Image/3.jpg",
 ];

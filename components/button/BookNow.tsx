@@ -17,7 +17,9 @@ export default function BookNow() {
           className="absolute w-full h-full inset-0 object-cover"
         />
       </div>
-      <p className="text">Book Now</p>
+      <p className="text-xl md:text-[3.5svh]  font-tangerine font-bold tracking-wider">
+        Book Now
+      </p>
     </Link>
   );
 }
