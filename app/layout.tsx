@@ -35,7 +35,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${tangerine.variable}  h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <div id="google_translate_element" />
         <Analytics />
         <NavBar />
         {children}
