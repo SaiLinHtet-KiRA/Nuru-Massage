@@ -15,6 +15,7 @@
   --color-gold: var(--gold-color);
   --color-silver: var(--silver-color);
   --font-tangerine: var(--font-tangerine);
+  --font-parisienne: var(--font-parisienne);
 }
 
 body {
@@ -53,7 +54,7 @@ section {
     @apply size-6 stroke-primary md:size-8;
   }
   h6 {
-    @apply text-3xl md:text-[3svw] text-primary;
+    @apply text-[10svw] md:text-[3svw] text-primary;
   }
   h5 {
     @apply text-xl md:text-[2svw];

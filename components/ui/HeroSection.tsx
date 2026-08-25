@@ -29,14 +29,13 @@ export default function HeroSection() {
           src="/logo.png"
           alt=""
           loading="eager"
-          className="md:w-[50svh] w-[30svh] top-0 object-right object-cover -z-1 "
+          className="md:w-[50svh] w-[40svh] top-0 object-right object-cover -z-1 "
         />
 
         <h6 className=" font-tangerine font-bold text-white">
           Relax | Rejuvenate | Renew
         </h6>
         <BookNow />
-        {/* <BadageContainer /> */}
       </motion.header>
       <MotionImage
         width={1080}

@@ -6,7 +6,7 @@ import { imageVariants } from "@/style/FeedIn";
 export default function ImageGrid() {
   return (
     <section
-      className="w-screen min-h-svh grid md:auto-rows-auto md:grid-cols-3 grid-cols-1 grid-row-[repeat(auto-fill,50svh)]"
+      className="w-screen md:h-svh h-auto min-h-svh grid md:grid-rows-2 md:grid-cols-3 grid-cols-1 grid-rows-[repeat(auto-fill,40svh)]"
       id="gallery"
     >
       {Images.map((src, i) => (

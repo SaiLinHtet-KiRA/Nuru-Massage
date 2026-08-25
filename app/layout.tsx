@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import { Tangerine } from "next/font/google";
+import { Tangerine, Parisienne } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/Bar/NavBar";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
+import GoogleTranslate from "@/components/GoogleTranslate";
 
 const tangerine = Tangerine({
   weight: ["400", "700"],
   variable: "--font-tangerine",
   subsets: ["latin"],
 });
-
+const parisienne = Parisienne({
+  weight: ["400"],
+  variable: "--font-parisienne",
+  subsets: ["latin"],
+});
 export const metadata: Metadata = {
   title: "M&M | Nuru Massage & Bar",
   description:
@@ -33,31 +38,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${tangerine.variable}  h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${tangerine.variable} ${parisienne.variable}  h-full antialiased`}
+    >
+      <head>
+        <meta name="google" content="translate" />
+      </head>
       <body className="min-h-full flex flex-col">
         <Analytics />
         <NavBar />
         {children}
-        <Script
-          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="afterInteractive"
-        />
-
-        <Script id="google-translate-init" strategy="afterInteractive">
-          {`
-            window.googleTranslateElementInit = function () {
-              new window.google.translate.TranslateElement(
-                {
-                  pageLanguage: "en",
-                  includedLanguages: "en,th,zh-CN,ja,ko",
-                  layout:
-                    window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-                },
-                "google_translate_element"
-              );
-            };
-          `}
-        </Script>
+        <GoogleTranslate />
       </body>
     </html>
   );
