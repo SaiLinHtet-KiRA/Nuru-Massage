@@ -63,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-full flex flex-col">
         <div id="google_translate_element" className="hiddens" />
+        <GoogleTranslate />
         <Analytics />
         <NavBar />
         {children}
