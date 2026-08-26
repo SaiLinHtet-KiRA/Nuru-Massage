@@ -42,8 +42,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Miss Molly Nuru Massage & Bar",
-  url: "https://missmollybar.site",
-  logo: "https://missmollybar.site/logo.webp",
+  url: "https://www.missmollybar.site",
+  logo: "https://www.missmollybar.site/logo.webp",
   telephone: "+66-81-092-5449",
   address: {
     "@type": "PostalAddress",
