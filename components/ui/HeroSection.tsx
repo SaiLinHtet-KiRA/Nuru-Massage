@@ -26,7 +26,7 @@ export default function HeroSection() {
           viewport={{ amount: 0.8 }}
           width={1080}
           height={960}
-          src="/logo.png"
+          src="/logo.webp"
           alt=""
           loading="eager"
           className="md:w-[50svh] w-[40svh] top-0 object-right object-cover -z-1 "

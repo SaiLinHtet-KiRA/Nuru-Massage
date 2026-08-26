@@ -47,7 +47,7 @@ export const Contacts = [
   },
   {
     text: "YouTube",
-    href: "https://www.instagram.com/thainurumassagr?igsh=Z2UyZ2JuYW5oOWJv&igsi=Z2UyZ2JuYW5oOWJv",
+    href: "https://www.youtube.com/@MMNuruMassageandBar",
     svg: Youtube,
   },
   {
@@ -69,5 +69,4 @@ export const Images = [
   "/Image/3.webp",
   "/Image/4.webp",
   "/Image/5.webp",
-  "/Image/6.webp",
 ];

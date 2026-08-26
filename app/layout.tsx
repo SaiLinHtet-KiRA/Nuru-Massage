@@ -19,12 +19,12 @@ const parisienne = Parisienne({
 export const metadata: Metadata = {
   title: "M&M | Nuru Massage & Bar",
   description:
-    "Discover M&M | Nuru Massage & Bar in Bangkok, near Kasap Road.Best Massage in Thailand .Enjoy a welcoming atmosphere and a relaxing massage experience in a comfortable setting. Perfect for visitors looking to unwind and enjoy a memorable experience in Bangkok.Girls are waiting for you guys",
+    "M&M is the best Nuru Massage place in Bangkok, near Kasap Road.Best Massage in Thailand .Enjoy a welcoming atmosphere and a relaxing massage experience in a comfortable setting. Perfect for visitors looking to unwind and enjoy a memorable experience in Bangkok.Girls are waiting for you guys",
   keywords: [
-    "Molly Nuru Massage & Bar",
+    "Miss Molly Nuru Massage & Bar",
     "M&M Nuru Massage & Bar",
     "Thai Massage Therapist",
-    "Molly",
+    "Miss Molly",
     "M&M",
     "Massage",
     "Massage Therpist",
@@ -32,10 +32,19 @@ export const metadata: Metadata = {
     "Top 1 Massage in Thai",
     "Best Massage in Thai",
     "Thai Massages",
-    "Massages in Bangkok ",
+    "Massages in Bangkok",
+    "massages near me",
+    "massage in Kasap Road",
   ],
+  icons: { icon: "/icon.webp", shortcut: "/icon.webp", apple: "/icon.webp" },
 };
-
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Miss Molly Nuru Massage & Bar",
+  url: "https://www.missmollybar.site",
+  logo: "https://www.missmollybar.site/logo.webp",
+};
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -44,8 +53,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <meta name="google" content="translate" />
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
+        <div id="google_translate_element" className="hiddens" />
         <Analytics />
         <NavBar />
         {children}
