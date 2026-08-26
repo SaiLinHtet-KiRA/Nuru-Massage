@@ -7,7 +7,7 @@ import BookNow from "../button/BookNow";
 export default function HeroSection() {
   return (
     <section
-      className="h-svh w-screen relative flex md:justify-start  justify-center md:items-center items-start"
+      className="h-svh w-screen relative flex  justify-center md:items-center items-start"
       id="home"
     >
       <motion.header
@@ -15,7 +15,7 @@ export default function HeroSection() {
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ amount: 0.8 }}
-        className=" relative font-bold z-10 md:m-0 md:t-0 mt-[15svh] mb-[2%] flex flex-col gap-1 items-center md:row-start-1 row-start-2 row-end-2 md:pl-[10%] pl-0 z-10
+        className=" relative font-bold z-10 md:m-0 md:t-0 mt-[15svh] mb-[2%] flex flex-col gap-1 items-center md:row-start-1 row-start-2 row-end-2  z-10
         "
       >
         <span className="linear-gradient" />
@@ -52,10 +52,22 @@ export default function HeroSection() {
         viewport={{ amount: 0.8 }}
         width={1080}
         height={960}
-        src="/dmodel.webp"
+        src="/hmodel-3.webp"
         alt=""
         loading="eager"
-        className="absolute w-full md:h-svh h-auto bottom-0  object-cover -z-1"
+        className="absolute md:w-[65svh] w-[55svw]  h-auto bottom-0 left-0 object-cover -z-1"
+      />
+      <MotionImage
+        variants={imageVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ amount: 0.8 }}
+        width={1080}
+        height={960}
+        src="/hmodel-2.webp"
+        alt=""
+        loading="eager"
+        className="absolute md:w-[60svh] w-[50svw]  h-auto bottom-0 right-0  object-cover -z-1 -scale-x-100"
       />
     </section>
   );
