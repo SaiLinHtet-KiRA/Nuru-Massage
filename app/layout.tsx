@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   keywords: [
     "Miss Molly Nuru Massage & Bar",
     "M&M Nuru Massage & Bar",
+    "M&M Nuru Massage",
+    "M&M Massage",
     "Thai Massage Therapist",
     "Miss Molly",
     "M&M",

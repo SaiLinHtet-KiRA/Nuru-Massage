@@ -69,4 +69,5 @@ export const Images = [
   "/Image/3.webp",
   "/Image/4.webp",
   "/Image/5.webp",
+  "/Image/6.webp",
 ];
