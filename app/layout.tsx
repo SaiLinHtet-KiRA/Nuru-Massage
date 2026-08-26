@@ -40,10 +40,35 @@ export const metadata: Metadata = {
 };
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   name: "Miss Molly Nuru Massage & Bar",
   url: "https://www.missmollybar.site",
   logo: "https://www.missmollybar.site/logo.webp",
+  telephone: "+66-81-092-5449",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "30 Chana Songkhram Alley",
+    addressLocality: "Chana Songkhram",
+    addressDistrict: "Phra Nakhon",
+    addressRegion: "Bangkok",
+    postalCode: "10200",
+    addressCountry: "TH",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "15:00",
+      closes: "1:00",
+    },
+  ],
 };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
