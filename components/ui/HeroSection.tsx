@@ -54,7 +54,7 @@ export default function HeroSection() {
         viewport={{ amount: 0.8 }}
         width={1080}
         height={960}
-        src="/modal-1.webp"
+        src="/model-1.webp"
         alt=""
         loading="eager"
         className="absolute md:h-svh w-screen  h-auto bottom-0 right-0  object-cover -z-1 "
