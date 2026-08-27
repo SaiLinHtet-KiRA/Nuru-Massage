@@ -68,10 +68,10 @@ export const Images = [
   "/model/2.webp",
   "/model/3.webp",
   "/model/4.webp",
-  "/model/5.webp",
   "/model/6.webp",
   "/model/7.webp",
   "/model/8.webp",
   "/model/9.webp",
+  "/model/5.webp",
   "/model/10.webp",
 ];
