@@ -6,7 +6,7 @@ import { imageVariants } from "@/style/FeedIn";
 export default function ImageGrid() {
   return (
     <section
-      className="w-screen md:h-svh h-auto min-h-svh grid md:grid-rows-2 md:grid-cols-3 grid-cols-1 grid-rows-[repeat(auto-fill,50svh)]"
+      className="w-screen md:h-svh h-auto min-h-svh grid md:grid-rows-2 md:grid-cols-5 grid-cols-1 auto-rows-auto md:gap-0 gap-2"
       id="gallery"
     >
       {Images.map((src, i) => (
@@ -19,7 +19,7 @@ export default function ImageGrid() {
           height={960}
           src={src}
           alt="M&M Massage room photo"
-          className="w-full h-full object-cover"
+          className="w-[80svw] md:h-full aspect-[4/6] object-cover object-top md:rounded-none rounded-xl mx-auto"
         />
       ))}
     </section>

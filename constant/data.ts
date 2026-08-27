@@ -64,10 +64,14 @@ export const Contacts = [
 ];
 
 export const Images = [
-  "/Image/1.webp",
-  "/Image/2.webp",
-  "/Image/3.webp",
-  "/Image/4.webp",
-  "/Image/5.webp",
-  "/Image/6.webp",
+  "/model/1.webp",
+  "/model/2.webp",
+  "/model/3.webp",
+  "/model/4.webp",
+  "/model/5.webp",
+  "/model/6.webp",
+  "/model/7.webp",
+  "/model/8.webp",
+  "/model/9.webp",
+  "/model/10.webp",
 ];
