@@ -10,7 +10,7 @@ export default function ServiceSection() {
         variants={imageVariants}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ amount: 1 }}
+        viewport={{ amount: 0.8 }}
         width={760}
         height={480}
         src="/menu.webp"
