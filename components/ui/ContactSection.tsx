@@ -17,7 +17,7 @@ export default function ContactSection() {
         variants={textVariants}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ amount: 0.8 }}
+        viewport={{ amount: 1 }}
         className=" flex flex-col items-center justify-end grow md:gap-2 gap-3"
       >
         <h6>Contact Us</h6>

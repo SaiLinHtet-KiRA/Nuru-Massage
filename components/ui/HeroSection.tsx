@@ -14,7 +14,7 @@ export default function HeroSection() {
         variants={textVariants}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ amount: 0.8 }}
+        viewport={{ amount: 1 }}
         className=" relative font-bold z-10 md:m-0 md:t-0 mt-[15svh] mb-[2%] flex flex-col gap-1
          items-center md:row-start-1 row-start-2 row-end-2  z-10 md:pl-[8svw] pl-0
         "
@@ -24,7 +24,7 @@ export default function HeroSection() {
           variants={imageVariants}
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ amount: 0.8 }}
+          viewport={{ amount: 1 }}
           width={1080}
           height={960}
           src="/logo.webp"
@@ -54,7 +54,7 @@ export default function HeroSection() {
         variants={imageVariants}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ amount: 0.8 }}
+        viewport={{ amount: 1 }}
         width={1080}
         height={960}
         src="/model-1.webp"

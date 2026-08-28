@@ -14,7 +14,7 @@ export default function AboutUs() {
         variants={textVariants}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ amount: 0.8 }}
+        viewport={{ amount: 1 }}
         className=" relative font-bold z-10 md:m-0 md:t-0 mt-[12svh] mb-[2%] flex flex-col gap-1 items-center md:row-start-1 row-start-2 row-end-2 md:pl-[10%] pl-0 z-10
         "
       >
@@ -44,7 +44,7 @@ export default function AboutUs() {
         variants={imageVariants}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ amount: 0.8 }}
+        viewport={{ amount: 1 }}
         width={1080}
         height={960}
         src="/model-2.webp"
