@@ -36,6 +36,9 @@ export default function HeroSection() {
         <h6 className=" font-tangerine font-bold text-white">
           Relax | Rejuvenate | Renew
         </h6>
+        <h5 className="text-2xl tracking-wider font-tangerine font-medium text-white/80">
+          Come See Our Girl Free Of Charge
+        </h5>
         <BookNow />
       </motion.header>
       <MotionImage
