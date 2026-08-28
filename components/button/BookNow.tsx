@@ -19,7 +19,7 @@ export default function BookNow() {
         />
       </div>
       <p className="text-[5svw] md:text-[3.5svh]  font-tangerine font-bold tracking-wider">
-        contact us
+        Contact Us
       </p>
     </Link>
   );

@@ -6,7 +6,7 @@ import ServiceSection from "@/components/ui/ServiceSection";
 
 export default function Page() {
   return (
-    <main className="h-dvh snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth">
+    <main className="h-dvh overflow-y-auto overflow-x-hidden scroll-smooth">
       <HeroSection />
       <ServiceSection />
       <AboutUs />

@@ -108,7 +108,7 @@ export default function NavBar() {
         className="px-6 py-1 text border-2 border-primary md:text-primary rounded-full font-bold md:bg-transparent bg-primary text-foreground"
         target="_blank"
       >
-        contact us
+        Contact Us
       </Link>
     </motion.nav>
   );
