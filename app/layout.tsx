@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     "massage in Kasap Road",
   ],
   icons: { icon: "/icon.webp", shortcut: "/icon.webp", apple: "/icon.webp" },
+  alternates: {
+    canonical: "https://www.missmollybar.site/",
+  },
 };
 const jsonLd = {
   "@context": "https://schema.org",
