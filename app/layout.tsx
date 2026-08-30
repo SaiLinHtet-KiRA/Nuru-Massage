@@ -17,9 +17,9 @@ const parisienne = Parisienne({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "M&M | Nuru Massage & Bar",
+  title: "M&M Nuru Massage & Bar | Bangkok",
   description:
-    "M&M is the best Nuru Massage place in Bangkok, near Kasap Road.Best Massage in Thailand .Enjoy a welcoming atmosphere and a relaxing massage experience in a comfortable setting. Perfect for visitors looking to unwind and enjoy a memorable experience in Bangkok.Girls are waiting for you guys",
+    "Miss Molly Nuru Massage & Bar in Bangkok offers a relaxing massage experience in a comfortable setting near Khao San Road. Find our location, opening hours, and services.",
   keywords: [
     "Miss Molly Nuru Massage & Bar",
     "M&M Nuru Massage & Bar",
